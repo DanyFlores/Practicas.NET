@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ltb_Task = new System.Windows.Forms.ListBox();
-            this.txt_Task = new System.Windows.Forms.TextBox();
-            this.lbl_Tarea = new System.Windows.Forms.Label();
-            this.btn_AddTask = new System.Windows.Forms.Button();
-            this.btn_Guardar = new System.Windows.Forms.Button();
-            this.btn_Eliminar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.btn_Guardar = new System.Windows.Forms.Button();
+            this.btn_AddTask = new System.Windows.Forms.Button();
+            this.lbl_Tarea = new System.Windows.Forms.Label();
+            this.txt_Task = new System.Windows.Forms.TextBox();
+            this.ltb_Task = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,26 +55,60 @@
             this.panel1.Size = new System.Drawing.Size(643, 313);
             this.panel1.TabIndex = 0;
             // 
-            // ltb_Task
+            // btn_Cancelar
             // 
-            this.ltb_Task.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ltb_Task.FormattingEnabled = true;
-            this.ltb_Task.Location = new System.Drawing.Point(5, 108);
-            this.ltb_Task.Name = "ltb_Task";
-            this.ltb_Task.Size = new System.Drawing.Size(634, 199);
-            this.ltb_Task.TabIndex = 0;
+            this.btn_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Cancelar.Location = new System.Drawing.Point(486, 6);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(75, 33);
+            this.btn_Cancelar.TabIndex = 6;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
-            // txt_Task
+            // btn_Eliminar
             // 
-            this.txt_Task.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Task.Location = new System.Drawing.Point(54, 58);
-            this.txt_Task.Multiline = true;
-            this.txt_Task.Name = "txt_Task";
-            this.txt_Task.Size = new System.Drawing.Size(507, 33);
-            this.txt_Task.TabIndex = 1;
+            this.btn_Eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Eliminar.FlatAppearance.BorderSize = 0;
+            this.btn_Eliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Eliminar.Location = new System.Drawing.Point(405, 6);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(75, 33);
+            this.btn_Eliminar.TabIndex = 5;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            // 
+            // btn_Guardar
+            // 
+            this.btn_Guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Guardar.FlatAppearance.BorderSize = 0;
+            this.btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar.Location = new System.Drawing.Point(324, 6);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Size = new System.Drawing.Size(75, 33);
+            this.btn_Guardar.TabIndex = 4;
+            this.btn_Guardar.Text = "Guardar";
+            this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
+            // 
+            // btn_AddTask
+            // 
+            this.btn_AddTask.FlatAppearance.BorderSize = 0;
+            this.btn_AddTask.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_AddTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_AddTask.Location = new System.Drawing.Point(6, 6);
+            this.btn_AddTask.Name = "btn_AddTask";
+            this.btn_AddTask.Size = new System.Drawing.Size(124, 33);
+            this.btn_AddTask.TabIndex = 3;
+            this.btn_AddTask.Text = "Agregar Nueva Tarea";
+            this.btn_AddTask.UseVisualStyleBackColor = true;
+            this.btn_AddTask.Click += new System.EventHandler(this.btn_AddTask_Click);
             // 
             // lbl_Tarea
             // 
@@ -88,48 +122,27 @@
             this.lbl_Tarea.TabIndex = 2;
             this.lbl_Tarea.Text = "Tarea";
             // 
-            // btn_AddTask
+            // txt_Task
             // 
-            this.btn_AddTask.Location = new System.Drawing.Point(6, 6);
-            this.btn_AddTask.Name = "btn_AddTask";
-            this.btn_AddTask.Size = new System.Drawing.Size(124, 33);
-            this.btn_AddTask.TabIndex = 3;
-            this.btn_AddTask.Text = "Agregar Nueva Tarea";
-            this.btn_AddTask.UseVisualStyleBackColor = true;
-            this.btn_AddTask.Click += new System.EventHandler(this.btn_AddTask_Click);
+            this.txt_Task.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Task.Location = new System.Drawing.Point(54, 58);
+            this.txt_Task.Multiline = true;
+            this.txt_Task.Name = "txt_Task";
+            this.txt_Task.Size = new System.Drawing.Size(507, 33);
+            this.txt_Task.TabIndex = 1;
             // 
-            // btn_Guardar
+            // ltb_Task
             // 
-            this.btn_Guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Guardar.Location = new System.Drawing.Point(324, 6);
-            this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(75, 33);
-            this.btn_Guardar.TabIndex = 4;
-            this.btn_Guardar.Text = "Guardar";
-            this.btn_Guardar.UseVisualStyleBackColor = true;
-            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
-            // 
-            // btn_Eliminar
-            // 
-            this.btn_Eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Eliminar.Location = new System.Drawing.Point(405, 6);
-            this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(75, 33);
-            this.btn_Eliminar.TabIndex = 5;
-            this.btn_Eliminar.Text = "Eliminar";
-            this.btn_Eliminar.UseVisualStyleBackColor = true;
-            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
-            // 
-            // btn_Cancelar
-            // 
-            this.btn_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(486, 6);
-            this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(75, 33);
-            this.btn_Cancelar.TabIndex = 6;
-            this.btn_Cancelar.Text = "Cancelar";
-            this.btn_Cancelar.UseVisualStyleBackColor = true;
-            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            this.ltb_Task.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ltb_Task.FormattingEnabled = true;
+            this.ltb_Task.Location = new System.Drawing.Point(5, 108);
+            this.ltb_Task.Name = "ltb_Task";
+            this.ltb_Task.Size = new System.Drawing.Size(634, 199);
+            this.ltb_Task.TabIndex = 0;
+            this.ltb_Task.SelectedIndexChanged += new System.EventHandler(this.ltb_Task_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -138,8 +151,8 @@
             this.ClientSize = new System.Drawing.Size(643, 313);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
